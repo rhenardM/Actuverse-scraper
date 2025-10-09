@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  scraper:
+    build: ../
+    environment:
+      - API_URL=http://backend:8000/api/scraper/ingest
+    depends_on:
+      - backend
+  backend:
+    image: placeholder/symfony-backend
+    # configure your backend here (Postgres, Symfony)
