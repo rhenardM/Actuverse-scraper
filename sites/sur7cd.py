@@ -38,8 +38,12 @@ def scrape(limit=10):
             link.endswith("/politique") or 
             link.endswith("/societe") or 
             link.endswith("/sport") or 
-            link.endswith("/sante") or
-            "/index.php" not in link):
+            link.endswith("/sante")):
+            continue
+
+        # Ne garder que les liens d'articles (avec pattern YYYY/MM/DD/)
+        import re
+        if not re.search(r'/20\d{2}/\d{2}/\d{2}/', link):
             continue
 
         img_tag = block.find("img")

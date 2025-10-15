@@ -8,22 +8,27 @@ def save_to_api(articles):
         return
     print(f"[*] Sending {len(articles)} articles to API: {API_URL}")
     for art in articles:
+        # Adapter le payload aux champs attendus par Symfony
         payload = {
             'title': art.get('title'),
-            'summary': art.get('summary'),
-            'content': art.get('content'),
-            'image_url': art.get('image_url'),
-            'author': art.get('author'),
-            'published_at': art.get('published_at'),
-            'source_name': art.get('source', art.get('source_name')),
             'url': art.get('url'),
+            'content': art.get('content'),
+            'image': art.get('image_url'),  # Symfony attend 'image', pas 'image_url'
+            'source': art.get('source'),
+            'publishedAt': art.get('published_at', 'now')  # Symfony attend 'publishedAt'
         }
+        
+        # Nettoyer les valeurs None
+        payload = {k: v for k, v in payload.items() if v is not None}
+        
         try:
+            print(f"[->] Sending: {payload.get('title', '')[:60]}...")
             r = requests.post(API_URL, json=payload, timeout=10)
-            if r.status_code in (200,201):
-                print(f"[+] Ingested: {payload.get('title')[:60]}")
+            if r.status_code in (200, 201):
+                print(f"[+] ✅ Saved: {payload.get('title', '')[:60]}")
             else:
-                print(f"[!] API responded {r.status_code}: {r.text}")
+                print(f"[!] ❌ API responded {r.status_code}: {r.text}")
+                print(f"[!] Payload was: {json.dumps(payload, indent=2)}")
         except Exception as e:
-            print(f"[!] Error posting article: {e}")
+            print(f"[!] ❌ Error posting article: {e}")
         time.sleep(0.2)  # small delay to avoid overwhelming API
