@@ -53,13 +53,24 @@ def main(dry_run=False, selected=None, show_full_content=False):
     print(f"[+] Total unique articles: {len(all_articles)}")
 
     if dry_run:
+        # Importer le catégoriseur pour afficher les catégories en dry-run
+        from utils.categorizer import categorize_article
+        
         for i, art in enumerate(all_articles[:30], 1):
+            # Calculer la catégorie pour l'affichage
+            category = categorize_article(
+                title=art.get('title', ''),
+                content=art.get('content', ''),
+                source=art.get('source', '')
+            )
+            
             print(f"--- {i} ---")
             print(f"Title: {art.get('title')}")
             print(f"URL: {art.get('url')}")
             print(f"Author: {art.get('author', 'N/A')}")
             print(f"Published: {art.get('published_at', 'N/A')}")
             print(f"Image: {art.get('image_url', 'No image')}")
+            print(f"🏷️  Catégorie: {category}")
             content = art.get('content', '')
             if content:
                 print(f"Content ({len(content)} chars):")
