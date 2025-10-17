@@ -1,0 +1,13 @@
+[2025-10-17 22:05:54] 🚀 Démarrage du scraping automatique ActuVerse
+[2025-10-17 22:05:54] 📋 Configuration:
+[2025-10-17 22:05:54]    Sites: sur7cd bbc france24 mediacongo
+[2025-10-17 22:05:54]    Filtre horaire: 2h
+[2025-10-17 22:05:54]    Vérification doublons: true
+[2025-10-17 22:05:54] 🔍 Lancement du scraping...
+[2025-10-17 22:07:36] ✅ Scraping terminé avec succès
+[2025-10-17 22:07:36] 🧹 Nettoyage des anciens logs...
+[2025-10-17 22:07:36] 📊 Statistiques des logs récents:
+[2025-10-17 22:07:36]    Logs des dernières 24h:        1
+[2025-10-17 22:07:36]    Taille totale des logs:  24K
+[2025-10-17 22:07:36] 🏁 Script d'automatisation terminé (code: 0)
+[2025-10-17 22:07:36] 🧹 Nettoyage terminé

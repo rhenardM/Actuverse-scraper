@@ -1,0 +1,80 @@
+2025-10-17 22:05:12,243 - __main__ - INFO - 🚀 Démarrage du scraping automatique ActuVerse
+2025-10-17 22:05:12,243 - __main__ - INFO - Mode: DRY RUN
+2025-10-17 22:05:12,243 - __main__ - INFO - API: http://127.0.0.1:8000/api/articles
+2025-10-17 22:05:12,243 - __main__ - INFO - Filtrage: 24h, Vérification doublons: False
+2025-10-17 22:05:12,353 - __main__ - INFO - Sites sélectionnés: ['france24']
+2025-10-17 22:05:12,353 - __main__ - INFO - 🔍 Scraping france24...
+2025-10-17 22:05:38,854 - __main__ - INFO - 📄 10 articles bruts récupérés de france24
+2025-10-17 22:05:38,854 - utils.deduplication - INFO - Articles récents (< 24h): 4/10
+2025-10-17 22:05:38,855 - utils.deduplication - INFO - === Statistiques france24 ===
+2025-10-17 22:05:38,856 - utils.deduplication - INFO - Total trouvés: 10
+2025-10-17 22:05:38,857 - utils.deduplication - INFO - Nouveaux: 4
+2025-10-17 22:05:38,857 - utils.deduplication - INFO - Déjà existants: 0
+2025-10-17 22:05:38,857 - utils.deduplication - INFO - Trop anciens: 6
+2025-10-17 22:05:38,857 - utils.deduplication - INFO - Taux de nouveauté: 40.0%
+2025-10-17 22:05:38,857 - __main__ - INFO - ✅ 4 nouveaux articles de france24 ajoutés
+2025-10-17 22:05:38,857 - __main__ - INFO - 📊 Total final après déduplication: 4 articles
+2025-10-17 22:05:38,858 - __main__ - INFO - === STATISTIQUES GLOBALES ===
+2025-10-17 22:05:38,858 - __main__ - INFO - Total articles trouvés: 10
+2025-10-17 22:05:38,858 - __main__ - INFO - Nouveaux articles: 4
+2025-10-17 22:05:38,858 - __main__ - INFO - Articles déjà existants: 0
+2025-10-17 22:05:38,858 - __main__ - INFO - Articles trop anciens: 6
+2025-10-17 22:05:38,858 - __main__ - INFO - Efficacité du scraping: 40.0%
+2025-10-17 22:05:38,858 - __main__ - INFO - === MODE DRY RUN - APERÇU DES ARTICLES ===
+2025-10-17 22:05:38,912 - __main__ - INFO - === FIN DRY RUN ===
+2025-10-17 22:05:55,056 - __main__ - INFO - 🚀 Démarrage du scraping automatique ActuVerse
+2025-10-17 22:05:55,057 - __main__ - INFO - Mode: PRODUCTION
+2025-10-17 22:05:55,057 - __main__ - INFO - API: http://127.0.0.1:8000/api/articles
+2025-10-17 22:05:55,057 - __main__ - INFO - Filtrage: 2h, Vérification doublons: True
+2025-10-17 22:05:55,154 - __main__ - INFO - Sites sélectionnés: ['sur7cd', 'bbc', 'france24', 'mediacongo']
+2025-10-17 22:05:55,154 - __main__ - INFO - 🔍 Scraping bbc...
+2025-10-17 22:06:08,860 - __main__ - INFO - 📄 10 articles bruts récupérés de bbc
+2025-10-17 22:06:08,861 - utils.deduplication - INFO - Articles récents (< 2h): 1/10
+2025-10-17 22:06:09,178 - utils.deduplication - WARNING - API check failed with status 404, treating all as new
+2025-10-17 22:06:09,179 - utils.deduplication - INFO - Articles nouveaux: 1, déjà existants: 0
+2025-10-17 22:06:09,179 - utils.deduplication - INFO - === Statistiques bbc ===
+2025-10-17 22:06:09,179 - utils.deduplication - INFO - Total trouvés: 10
+2025-10-17 22:06:09,179 - utils.deduplication - INFO - Nouveaux: 1
+2025-10-17 22:06:09,179 - utils.deduplication - INFO - Déjà existants: 0
+2025-10-17 22:06:09,179 - utils.deduplication - INFO - Trop anciens: 9
+2025-10-17 22:06:09,179 - utils.deduplication - INFO - Taux de nouveauté: 10.0%
+2025-10-17 22:06:09,179 - __main__ - INFO - ✅ 1 nouveaux articles de bbc ajoutés
+2025-10-17 22:06:09,179 - __main__ - INFO - 🔍 Scraping france24...
+2025-10-17 22:06:32,083 - __main__ - INFO - 📄 10 articles bruts récupérés de france24
+2025-10-17 22:06:32,083 - utils.deduplication - INFO - Articles récents (< 2h): 0/10
+2025-10-17 22:06:32,083 - utils.deduplication - INFO - === Statistiques france24 ===
+2025-10-17 22:06:32,083 - utils.deduplication - INFO - Total trouvés: 10
+2025-10-17 22:06:32,083 - utils.deduplication - INFO - Nouveaux: 0
+2025-10-17 22:06:32,083 - utils.deduplication - INFO - Déjà existants: 0
+2025-10-17 22:06:32,083 - utils.deduplication - INFO - Trop anciens: 10
+2025-10-17 22:06:32,083 - utils.deduplication - INFO - Taux de nouveauté: 0.0%
+2025-10-17 22:06:32,083 - __main__ - INFO - ✅ 0 nouveaux articles de france24 ajoutés
+2025-10-17 22:06:32,083 - __main__ - INFO - 🔍 Scraping mediacongo...
+2025-10-17 22:06:57,341 - __main__ - INFO - 📄 10 articles bruts récupérés de mediacongo
+2025-10-17 22:06:57,345 - utils.deduplication - INFO - Articles récents (< 2h): 0/10
+2025-10-17 22:06:57,345 - utils.deduplication - INFO - === Statistiques mediacongo ===
+2025-10-17 22:06:57,347 - utils.deduplication - INFO - Total trouvés: 10
+2025-10-17 22:06:57,347 - utils.deduplication - INFO - Nouveaux: 0
+2025-10-17 22:06:57,347 - utils.deduplication - INFO - Déjà existants: 0
+2025-10-17 22:06:57,348 - utils.deduplication - INFO - Trop anciens: 10
+2025-10-17 22:06:57,348 - utils.deduplication - INFO - Taux de nouveauté: 0.0%
+2025-10-17 22:06:57,348 - __main__ - INFO - ✅ 0 nouveaux articles de mediacongo ajoutés
+2025-10-17 22:06:57,348 - __main__ - INFO - 🔍 Scraping sur7cd...
+2025-10-17 22:07:36,481 - __main__ - INFO - 📄 10 articles bruts récupérés de sur7cd
+2025-10-17 22:07:36,481 - utils.deduplication - INFO - Articles récents (< 2h): 0/10
+2025-10-17 22:07:36,481 - utils.deduplication - INFO - === Statistiques sur7cd ===
+2025-10-17 22:07:36,481 - utils.deduplication - INFO - Total trouvés: 10
+2025-10-17 22:07:36,481 - utils.deduplication - INFO - Nouveaux: 0
+2025-10-17 22:07:36,481 - utils.deduplication - INFO - Déjà existants: 0
+2025-10-17 22:07:36,481 - utils.deduplication - INFO - Trop anciens: 10
+2025-10-17 22:07:36,481 - utils.deduplication - INFO - Taux de nouveauté: 0.0%
+2025-10-17 22:07:36,481 - __main__ - INFO - ✅ 0 nouveaux articles de sur7cd ajoutés
+2025-10-17 22:07:36,481 - __main__ - INFO - 📊 Total final après déduplication: 1 articles
+2025-10-17 22:07:36,481 - __main__ - INFO - === STATISTIQUES GLOBALES ===
+2025-10-17 22:07:36,481 - __main__ - INFO - Total articles trouvés: 40
+2025-10-17 22:07:36,482 - __main__ - INFO - Nouveaux articles: 1
+2025-10-17 22:07:36,482 - __main__ - INFO - Articles déjà existants: 0
+2025-10-17 22:07:36,482 - __main__ - INFO - Articles trop anciens: 39
+2025-10-17 22:07:36,482 - __main__ - INFO - Efficacité du scraping: 2.5%
+2025-10-17 22:07:36,482 - __main__ - INFO - 📤 Envoi de 1 nouveaux articles vers l'API...
+2025-10-17 22:07:36,838 - __main__ - INFO - ✅ Scraping automatique terminé avec succès
